@@ -12,7 +12,7 @@
 
 #ifndef __GNL_H
 # define __GNL_H
-# define BUFF_SIZE 1
+# define BUFF_SIZE 100
 # include "libft/libft.h"
 
 typedef struct		s_lst
@@ -25,4 +25,5 @@ typedef struct		s_lst
 int		fillstr(t_lst *lst, char **line);
 t_lst 	*crema(int fd, t_lst *lst);
 int		get_next_line(const int fd, char **line);
+int		rd(t_lst *lst, char **line);
 #endif
