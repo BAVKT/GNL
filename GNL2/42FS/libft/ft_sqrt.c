@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmercadi <vmercadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/04 09:18:43 by vmercadi          #+#    #+#             */
-/*   Updated: 2017/07/24 15:18:26 by vmercadi         ###   ########.fr       */
+/*   Created: 2017/05/31 15:18:30 by vmercadi          #+#    #+#             */
+/*   Updated: 2017/05/31 15:34:39 by vmercadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __GNL_H
-# define __GNL_H
-# define BUFF_SIZE 200
-# include "libft/libft.h"
+#include "libft.h"
 
-typedef struct		s_lst
+int		ft_sqrt(int nb)
 {
-	int				fd;
-	char			str[BUFF_SIZE + 1];
-	struct s_lst	*next;
-}					t_lst;
+	int	prime;
+	int	i;
 
-int		fillstr(t_lst *lst, char **line);
-t_lst 	*crema(int fd, t_lst *lst);
-int		get_next_line(const int fd, char **line);
-int		rd(t_lst *lst, char **line);
-#endif
+	prime = 1;
+	i = 0;
+	while (prime < nb)
+	{
+		i++;
+		prime = i * i;
+	}
+	return (i);
+}
